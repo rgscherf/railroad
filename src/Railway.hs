@@ -1,4 +1,4 @@
-module Railroad
+module Railway
     ( (|>)
     , (<|)
     , (<<.)
