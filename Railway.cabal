@@ -1,8 +1,8 @@
-name:                Railroad
+name:                Railway
 version:             0.1.0.1
 synopsis:            Zero-dependency pipe operators
 description:         Please see README.md
-homepage:            https://github.com/githubuser/railroad#readme
+homepage:            https://github.com/rgscherf/railway#readme
 license:             MIT
 license-file:        LICENSE
 author:              Robert Scherf
@@ -15,27 +15,29 @@ cabal-version:       >=1.10
 
 library
   hs-source-dirs:      src
-  exposed-modules:     Railroad
+  exposed-modules:     Railway
   build-depends:       base >= 4.7 && < 5
   default-language:    Haskell2010
 
--- executable railroad-exe
+-- executable railway-exe
 --   hs-source-dirs:      app
 --   main-is:             Main.hs
 --   ghc-options:         -threaded -rtsopts -with-rtsopts=-N
 --   build-depends:       base
---                      , railroad
+--                      , railway
 --   default-language:    Haskell2010
 
-test-suite railroad-test
+test-suite railway-test
   type:                exitcode-stdio-1.0
   hs-source-dirs:      test
   main-is:             Spec.hs
   build-depends:       base
-                     , railroad
+                     , Railway
+                     , hspec
+                     , text
   ghc-options:         -threaded -rtsopts -with-rtsopts=-N
   default-language:    Haskell2010
 
 source-repository head
   type:     git
-  location: https://github.com/rgscherf/railroad
+  location: https://github.com/rgscherf/railway
